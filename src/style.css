@@ -1,0 +1,104 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.categories-section {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.categories-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.events-section {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.current-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.vertical-slider {
+  height: 500px;
+  width: 100%;
+}
+
+.event-slide {
+  height: auto;
+  width: 100%;
+}
+
+.event-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 20px; /* Отступы по бокам */
+  width: calc(100% - 40px); /* Ширина с учетом отступов */
+  box-sizing: border-box;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #007bff;
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px;
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 10px;
+}
+
+.dates-display {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.start-date {
+  font-size: 3rem;
+  color: #5d5fef;
+}
+.end-date {
+  font-size: 3rem;
+  color: #ef5da8;
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 10px;
+  }
+
+  .vertical-slider {
+    height: 400px;
+  }
+
+  .event-card {
+    margin: 10px;
+    width: calc(100% - 20px);
+  }
+}
