@@ -1,8 +1,10 @@
 export interface HistoricalEvent {
+  id: number;
   year: number;
-  description?: string;
+  description: string;
 }
 export interface Category {
+  id: number;
   name: string;
   events: HistoricalEvent[];
 }
