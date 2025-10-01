@@ -7,9 +7,8 @@ import 'swiper/css/free-mode';
 import 'swiper/css/mousewheel';
 
 import './style.css';
-import './moreStyle.css';
 
-import { MainSlider } from './Main';
+import { MainSlider } from './Components/Main';
 
 const container = document.getElementById('root');
 if (container) {

@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { EventsSlider } from './EventsSlider';
 import { SliderControllers } from './Controllers';
-import { mockCategories } from './data';
+import { mockCategories } from '../data/data';
+import { DateComponent } from './Date';
 
 export const MainSlider = () => {
   const [activeCategory, setActiveCategory] = useState(0);
@@ -28,20 +29,26 @@ export const MainSlider = () => {
   }, [currentCategory]);
   return (
     <div className="main-slider">
-      <h2>Исторические даты</h2>
-      <div className="dates-display">
-        <span className="start-date">{startYear}</span>
-        <span className="end-date">{endYear}</span>
+      <div className="header-content">
+        <div className="gradient" />
+        <h2 className="main-title">Исторические даты</h2>
       </div>
-      <SliderControllers onNext={handleNext} onPrev={handlePrev} />
+
+      <div className="dates-display">
+        <DateComponent className="start-date" value={startYear} />
+        <DateComponent className="end-date" value={endYear} />
+      </div>
+      <div className="controllers-container">
+        <div>
+          {String(activeCategory + 1).padStart(2, '0')} /{' '}
+          {String(mockCategories.length).padStart(2, '0')}
+        </div>
+        <SliderControllers onNext={handleNext} onPrev={handlePrev} />
+      </div>
 
       <div className="events-section">
         <div className="current-category">
           <h3>{currentCategory.name}</h3>
-          <div className="counter">
-            {String(activeCategory + 1).padStart(2, '0')} /{' '}
-            {String(mockCategories.length).padStart(2, '0')}
-          </div>
         </div>
 
         <EventsSlider events={currentCategory.events} />
