@@ -38,7 +38,7 @@ _Completed: October 2025_
 Video of result: https://disk.yandex.ru/i/BvEzUFHw0L1Ung
 
 #### History in slides
-Some tasks were not fullfiled because I didn't make it in time.
+Some tasks were not fullfiled.
 
 Task:
 
